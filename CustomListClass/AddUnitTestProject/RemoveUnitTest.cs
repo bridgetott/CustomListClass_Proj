@@ -5,7 +5,7 @@ using CustomList;
 namespace AddUnitTestProject
 {
     [TestClass]
-    public class AddUnitTest
+    public class RemoveUnitTest
     {
         [TestMethod]
         public void Add_ThreePositiveValues_CountThree()
