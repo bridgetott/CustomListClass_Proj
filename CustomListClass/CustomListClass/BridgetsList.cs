@@ -11,6 +11,7 @@ namespace CustomList
     {
         //member variable
 
+        
         private int count;
         private int capacity;
 
@@ -21,6 +22,13 @@ namespace CustomList
             get
             {
                 return count;
+            }
+        }
+        public int Capacity
+        {
+            get
+            {
+                return capacity;
             }
         }
 
@@ -37,7 +45,8 @@ namespace CustomList
         //member methods
         public void Add(T item)
         {
-            // put the index in the items
+            _items[count] = item;
+            count++;
         }
     }
 }
