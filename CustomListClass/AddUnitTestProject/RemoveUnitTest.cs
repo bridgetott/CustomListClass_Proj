@@ -61,7 +61,6 @@ namespace AddUnitTestProject
             bridgetsList.Remove(value4)
             
 
-
             actual = bridgetsList[3];
 
             //assert
@@ -92,10 +91,68 @@ namespace AddUnitTestProject
             bridgetsList.Remove(value2);
             bridgetsList.Remove(value3);
 
+            actual = bridgetsList[0];
 
+            //assert
+            Assert.AreEqual(expected, actual);
+        }
 
+        [TestMethod]
+
+        public void Remove_ValueSix_ZeroIndexOne()
+        {
+            //arrange
+            BridgetsList<int> bridgetsList = new BridgetsList<int>();
+            int value1 = 1;
+            int value2 = 2;
+            int value3 = 3;
+            int value4 = 4;
+            int value5 = 5;
+            int value6 = 6;
+            int expected = 1;
+            int actual;
+
+            //act
+            bridgetsList.Add(value1);
+            bridgetsList.Add(value2);
+            bridgetsList.Add(value3);
+            bridgetsList.Add(value4);
+            bridgetsList.Add(value5);
+            bridgetsList.Remove(value6);
+    
 
             actual = bridgetsList[0];
+
+            //assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+
+        public void Remove_ValueFourWhenInTheListMultipleTimes_FourIndexFour()
+        {
+            //arrange
+            BridgetsList<int> bridgetsList = new BridgetsList<int>();
+            int value1 = 1;
+            int value2 = 2;
+            int value3 = 3;
+            int value4 = 4;
+            int value5 = 5;            
+            int expected = 1;
+            int actual;
+
+            //act
+            bridgetsList.Add(value1);
+            bridgetsList.Add(value2);
+            bridgetsList.Add(value3);
+            bridgetsList.Add(value4);
+            bridgetsList.Add(value5);
+            bridgetsList.Add(value4);
+            bridgetsList.Remove(value4);
+            
+
+
+            actual = bridgetsList[4];
 
             //assert
             Assert.AreEqual(expected, actual);
