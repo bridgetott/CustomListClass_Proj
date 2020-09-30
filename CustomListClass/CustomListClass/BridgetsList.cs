@@ -16,7 +16,13 @@ namespace CustomList
 
         private T[] _items;
 
-        public int MyProperty { get;  }
+        public int Count 
+        {
+            get
+            {
+                return count;
+            }
+        }
 
         ////constructor
         public BridgetsList()
@@ -31,7 +37,7 @@ namespace CustomList
         //member methods
         public void Add(T item)
         {
-
+            // put the index in the items
         }
     }
 }
