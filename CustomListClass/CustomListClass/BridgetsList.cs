@@ -11,21 +11,27 @@ namespace CustomList
     {
         //member variable
 
-        //public int count;
-        //public int capacity;
+        private int count;
+        private int capacity;
 
-        //private T[] _items;
+        private T[] _items;
+
+        public int MyProperty { get;  }
 
         ////constructor
-        //public BridgetsList()
-        //{
+        public BridgetsList()
+        {
 
-        //    count = 0;
-        //    capacity = 4;    
+            count = 0;
+            capacity = 4;
+            _items = new T[capacity];
 
-        //}
+        }
 
         //member methods
+        public void Add(T item)
+        {
 
+        }
     }
 }
