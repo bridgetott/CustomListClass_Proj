@@ -11,19 +11,19 @@ namespace CustomList
     {
         //member variable
 
-        public int count;
-        public int capacity;
+        //public int count;
+        //public int capacity;
 
-        private T[] _items;
+        //private T[] _items;
 
-        //constructor
-        public BridgetsList()
-        {
+        ////constructor
+        //public BridgetsList()
+        //{
 
-            count = 0;
-            capacity = 4;    
+        //    count = 0;
+        //    capacity = 4;    
 
-        }
+        //}
 
         //member methods
 
