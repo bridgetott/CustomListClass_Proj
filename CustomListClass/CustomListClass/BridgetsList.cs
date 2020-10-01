@@ -1,4 +1,5 @@
 ﻿using System;
+using System.CodeDom;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -32,18 +33,18 @@ namespace CustomList
             }
         }
 
-        int[] bridgetslist = new int[10]
+       
+        public T this[int index]
         {
-            1, 2, 3, 4, 5,
-            6, 7, 8, 9, 10
-        };
-
-        public int length => bridgetslist.Length;
-
-        public int this[int index]
-        {
-            get => bridgetslist[index];
-            set => bridgetslist[index] = value;
+            get
+            {
+                if (index < count && index >= 0)
+                {
+                   return _items[index];
+                }
+                throw new ArgumentOutOfRangeException();
+            }
+            set => _items[index] = value;
          }
 
         ////constructor
@@ -59,8 +60,13 @@ namespace CustomList
         //member methods
         public void Add(T item)
         {
+
             _items[count] = item;
             count++;
+            if (capacity >= count)
+            {
+                _items = new T[capacity * 2];
+            }
         }
 
         public void Remove(T item)
