@@ -32,6 +32,20 @@ namespace CustomList
             }
         }
 
+        int[] bridgetslist = new int[10]
+        {
+            1, 2, 3, 4, 5,
+            6, 7, 8, 9, 10
+        };
+
+        public int length => bridgetslist.Length;
+
+        public int this[int index]
+        {
+            get => bridgetslist[index];
+            set => bridgetslist[index] = value;
+         }
+
         ////constructor
         public BridgetsList()
         {
@@ -47,6 +61,12 @@ namespace CustomList
         {
             _items[count] = item;
             count++;
+        }
+
+        public void Remove(T item)
+        {
+            _items[count] = item;
+            count--;
         }
     }
 }
