@@ -61,16 +61,30 @@ namespace CustomList
         public void Add(T item)
         {
 
+            if (count == capacity)
+            {
+                capacity = capacity * 2;
+                T[] tempArray = new T[capacity];
+                for (int i = 0; i < count; i++)
+                {
+                
+                    tempArray[i] = _items[i];
+
+                }
+                _items = tempArray;
+            }
             _items[count] = item;
             count++;
-            if (capacity >= count)
-            {
-                _items = new T[capacity * 2];
-            }
+            
         }
 
         public void Remove(T item)
         {
+            for (int i = 0; i < count; i--)
+            {
+
+
+            }
             _items[count] = item;
             count--;
         }

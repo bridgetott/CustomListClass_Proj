@@ -58,7 +58,7 @@ namespace AddUnitTestProject
             bridgetsList.Add(value3);
             bridgetsList.Add(value4);
             bridgetsList.Add(value5);
-            bridgetsList.Remove(value4)
+            bridgetsList.Remove(value4);
             
 
             actual = bridgetsList[3];
